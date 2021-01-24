@@ -17,6 +17,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/work-experience',
+    name: 'WorkExperience',
+    component: () => import('../views/WorkExperience.vue')
+  },
+  {
+    path: '/projects/:id?', //la interrogación es importante. Si no se pone la página aparece en blanco si no recibe el parámetro id
+    name: 'projects',
+    component: () => import('../views/Projects.vue')
   }
 ]
 

@@ -1,32 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <main-menu></main-menu>
     <router-view/>
   </div>
 </template>
 
+<script>
+
+import MainMenu from '@/components/MainMenu.vue'
+
+export default {
+  components:{
+    'main-menu': MainMenu
+  }
+}
+</script>
+
 <style lang="scss">
+html{
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+}
 #app {
+  width: 99vw;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
