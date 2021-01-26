@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <main-menu></main-menu>
-    <router-view/>
+    <the-menu></the-menu>    
+    <div class="container">
+      <router-view/>
+    </div>    
   </div>
 </template>
 
 <script>
 
-import MainMenu from '@/components/MainMenu.vue'
+import TheMenu from '@/components/TheMenu.vue'
 
 export default {
   components:{
-    'main-menu': MainMenu
+    'the-menu': TheMenu
   }
 }
 </script>
@@ -28,15 +30,24 @@ html{
 }
 body{
   margin: 0;
+  background: url(https://ubunlog.com/wp-content/uploads/2016/08/Fondo-Sylvia-Ritter.png);
+  background-size: cover;
+}
+h1,h2,h3{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 #app {
-  width: 99vw;
-  margin-left: auto;
-  margin-right: auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+
+  
+}
+
+.container{
+  background-color: white;
 }
 
 
