@@ -1,4 +1,4 @@
-# proyectoroute
+# curriculumvitae_vue
 
 ## Project setup
 ```
