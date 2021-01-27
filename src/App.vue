@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <the-menu></the-menu>    
-    <div class="container">
+  <div id="app" class="container">
+    <div class="header">
+     <the-menu></the-menu>
+    </div>       
+    <div class="content">
       <router-view/>
+    </div>
+    <div class="footer">
+      <base-footer></base-footer>
     </div>    
   </div>
 </template>
 
 <script>
 
-import TheMenu from '@/components/TheMenu.vue'
+import TheMenu from '@/components/TheMenu.vue';
+import BaseFooter from '@/components/BaseFooter';
 
 export default {
   components:{
-    'the-menu': TheMenu
+    'the-menu': TheMenu,
+    'base-footer': BaseFooter
   }
 }
 </script>
@@ -47,7 +54,13 @@ h1,h2,h3{
 }
 
 .container{
-  background-color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  .content{
+    padding: 1em;
+    background-color: white;
+  }
 }
 
 

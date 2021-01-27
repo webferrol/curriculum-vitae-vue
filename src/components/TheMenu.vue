@@ -32,7 +32,7 @@ export default {
     .main-menu{
        
         display: flex;
-        flex-wrap: wrap;
+        
 
         a {
             flex-grow: 1;
