@@ -14,12 +14,12 @@
 
 <script>
 
-import TheMenu from '@/components/TheMenu.vue';
+import TheNavBar from '@/components/TheNavBar.vue';
 import BaseFooter from '@/components/BaseFooter';
 
 export default {
   components:{
-    'the-menu': TheMenu,
+    'the-menu': TheNavBar,
     'base-footer': BaseFooter
   }
 }

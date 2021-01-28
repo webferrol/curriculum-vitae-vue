@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '',
     name: 'Home',
     component: Home
   },
@@ -25,14 +25,22 @@ const routes = [
   },
   {
     path: '/projects/:id?', //la interrogación es importante. Si no se pone la página aparece en blanco si no recibe el parámetro id
-    name: 'projects',
-    component: () => import('../views/Projects.vue')
+    name: 'Projects',
+    component: () => import('../views/Projects.vue'),
+    // children:[
+    //   {
+    //     path:'/projects/:id?',
+    //     name: 'Projects',
+    //     component: () => import('../views/Projects.vue'),
+    //   }
+    // ]
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',//para quitar el slash de las rutas
-  routes
+  routes,
+  base: '/'
 })
 
 export default router

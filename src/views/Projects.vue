@@ -3,7 +3,7 @@
         <header>
             <h1>Proyectos   {{ getRuta }}</h1>
             Componente {{ $route.params.id }}
-            <router-link v-for="(item,key) of rutas" :key="key" :to="{name: 'projects', params: {id: item.id}}">
+            <router-link v-for="(item,key) of rutas" :key="key" :to="{name: 'Projects', params: {id: item.id}}">
                 <div>
                     <button>{{ item.id }}</button>
                 </div>            
@@ -18,6 +18,7 @@
 import VProject from '@/components/VProject.vue'
 
 export default { 
+    name: 'Projects',
     components:{
         'componente-proyecto':VProject
     },

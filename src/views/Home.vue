@@ -1,5 +1,5 @@
 <template>
-  <section class="home principal">
+  <section class="home main">
     <div class="column-1">
       <formacion-academica mensaje="Formación académica" />
       
@@ -34,13 +34,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .principal{
+  .main{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(12,1fr);
+    gap: 1px;
+    align-items: center;
+    .column-1{
+      grid-column-start: 2;
+      grid-column-end: span 4;
+      background: chocolate;
+    }
+    .column-2{
+      grid-column-start: 7;
+      grid-column-end: span 6;
+    }
   }
-  img.foto{
-    width: 100%;
-    max-width: 200px;    
-    object-fit: contain;
-  }
+ 
 </style>

@@ -1,6 +1,13 @@
 <template>
     <nav class="main-menu nav nav-pills nav-fill"> 
-        <router-link class="nav-item nav-link" v-for="(item,key) of getMenuPrincipal" :key="key" :to="item.enlace">{{ item.texto}}</router-link> 
+        <router-link  
+            v-for="(item,key) of getMenuPrincipal" 
+            :key="key" 
+            :to="{path: item.enlace}" 
+            :class="{'router-link-exact-active': ($route.name === 'Projects') && item.texto==='Proyectos'}">
+            {{ item.texto}} 
+            <!-- {{$route.name}} -->
+        </router-link>
     </nav>
 </template>
 
@@ -9,7 +16,7 @@
 import {mapGetters} from "vuex"
 
 export default {
-    name: 'TheMenu',
+    name: 'thenavbar',
     computed: {
         ...mapGetters(['getMenuPrincipal'])
     },
