@@ -36,20 +36,34 @@ export default {
 
 <style lang="scss" scoped>
      $bg-color: rgba(#007bff,.5);
+     $tablet: 720px;
+     $desktop: 1020px;
     .main-menu{
-       
-        display: flex;
+        
+        @media (min-width: $tablet){
+            display: flex;
+        }
+        
         
 
         a {
-            flex-grow: 1;
-            flex-basis: 25%;
-            flex-shrink: 0;
+            display: flex;
+            justify-content: flex-start;
+            @media (min-width: $tablet) {
+                flex-grow: 1;
+                flex-basis: 25%;
+                flex-shrink: 0;
+
+                justify-content: center;
+                align-items: center;
+            }
+            
+            
             
             background-color: rgba( white,.3);
             
             color: white;
-            text-align: center;
+            
 
             text-decoration: none;
             font-size: 1rem;

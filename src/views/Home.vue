@@ -34,19 +34,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  $tablet: 720px;
+  $desktop: 1020px;
   .main{
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 1px;
-    align-items: center;
+    grid-template-rows: auto 1fr;
+    gap: 24px;
+    @media (min-width: $tablet){
+      grid-template-columns: repeat(12,1fr);
+    }
     .column-1{
-      grid-column-start: 2;
-      grid-column-end: span 4;
+      @media (min-width: $tablet){
+        grid-column: 1 / span 6;
+      }
+      @media (min-width: $desktop){
+        grid-column: 1 / span 4;
+      }
       background: chocolate;
     }
     .column-2{
-      grid-column-start: 7;
-      grid-column-end: span 6;
+      @media (min-width: $tablet){
+        grid-column: 7 / span 6;
+      }
+       @media (min-width: $desktop){
+        grid-column: 5 / span 8;
+      }
     }
   }
  

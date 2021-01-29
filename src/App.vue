@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss">
+$tablet: 720px;
+$desktop: 1020px;
 html{
   font-size: 100%;
   box-sizing: border-box;
@@ -37,7 +39,7 @@ html{
 }
 body{
   margin: 0;
-  background: url(https://ubunlog.com/wp-content/uploads/2016/08/Fondo-Sylvia-Ritter.png);
+  background: black;
   background-size: cover;
 }
 h1,h2,h3{
