@@ -6,10 +6,10 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     enlacesMenuPrincipal: [
-      {texto: 'Home', enlace: '/'},
-      {texto: 'Sobre', enlace: '/about'},
-      {texto: 'Experiencia laboral', enlace: '/work-experience'},
-      {texto: 'Proyectos', enlace: '/projects'}
+      {id: 1, texto: 'Home', enlace: '/'},
+      {id: 2, texto: 'Sobre', enlace: '/about'},
+      {id: 3, texto: 'Experiencia laboral', enlace: '/work-experience'},
+      {id: 4, texto: 'Proyectos', enlace: '/projects'}
     ]
   },
   getters:{

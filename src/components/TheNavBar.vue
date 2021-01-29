@@ -4,7 +4,7 @@
             v-for="(item,key) of getMenuPrincipal" 
             :key="key" 
             :to="{path: item.enlace}" 
-            :class="{'router-link-exact-active': ($route.name === 'Projects') && item.texto==='Proyectos'}">
+            :class="{'router-link-exact-active': ($route.name === 'Projects') && item.id===4}">
             {{ item.texto}} 
             <!-- {{$route.name}} -->
         </router-link>
