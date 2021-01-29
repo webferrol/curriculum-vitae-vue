@@ -1,7 +1,7 @@
 <template>
   <section class="home main">
     <div class="column-1">
-      <formacion-academica mensaje="Formación académica" />
+      <formacion-academica mensaje="Formación académica"></formacion-academica>
       
     </div>
     <div class="column-2">
