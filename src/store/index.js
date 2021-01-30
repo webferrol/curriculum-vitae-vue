@@ -11,7 +11,8 @@ export default new Vuex.Store({
       {id: 3, texto: 'Experiencia laboral', enlace: '/work-experience'},
       {id: 4, texto: 'Proyectos', enlace: '/projects'}
     ],
-    formacionAcademica:[]
+    formacionAcademica:[],
+    etiquetasProfesionales: []
   },
   getters:{
     getMenuPrincipal: (state) => state.enlacesMenuPrincipal
@@ -19,6 +20,9 @@ export default new Vuex.Store({
   mutations: {
     obtenerFormacionAcademica(state,getFormacionAcademica){
       state.formacionAcademica = getFormacionAcademica;
+    },
+    getEtiquetasProfesionales(state,getEtiquetasProfesionales){
+      state.etiquetasProfesionales = getEtiquetasProfesionales.etiquetas_profesionales;
     }
   },
   actions: {
@@ -27,10 +31,14 @@ export default new Vuex.Store({
       .then(data=>data.json())
       .then(obj=>obj.formacion_academica)
       .then(array=>{
-        console.log(array)
+        //console.log(array)
         commit('obtenerFormacionAcademica',array);
       })
       .catch(error=>console.log(error));
+    },
+    async getEtiquetasProfesionales(context){
+      const datos = await fetch('https://raw.githubusercontent.com/webferrol/json/master/formacion-academica.json');
+      context.commit('getEtiquetasProfesionales',await datos.json());
     }
   },
   modules: {

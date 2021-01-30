@@ -28,6 +28,7 @@ export default {
 <style lang="scss">
 $tablet: 720px;
 $desktop: 1020px;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 html{
   font-size: 100%;
   box-sizing: border-box;
@@ -41,19 +42,25 @@ body{
   margin: 0;
   background: black;
   background-size: cover;
+
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.5em;
 }
 h1,h2,h3{
   margin-top: 0;
   margin-bottom: 0;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+h1{
+  font-size: 1.6em;
+}
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   color: #2c3e50;
 
   
-}
+// }
 
 .container{
   display: grid;

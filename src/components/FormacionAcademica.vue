@@ -5,9 +5,9 @@
         </header>
         <ul v-if="formacionAcademica.length">
             <li v-for="(item,key) of formacionAcademica" :key="key">
-                {{item.titulo}} {{item.fecha}}
+                <strong>{{item.titulo}}</strong>. {{item.fecha}}
                 <ul>
-                    <li>{{item.centro}}</li>
+                    <li><em>{{item.centro}}</em></li>
                 </ul>
             </li>
         </ul>
@@ -30,6 +30,9 @@ export default {
     },
     methods:{
         ...mapActions(['getFormacionAcademica'])
+    },
+    beforeMount(){
+        this.getFormacionAcademica() //Si queremos mostrarlo sin hacer click en el botón
     }
 }
 </script>
